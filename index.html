@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+ position:fixed;
+  right: -200px;
+  bottom: -150px;
+  min-width: 80%; 
+  min-height: 80%;
+  -ms-zoom-animation: none;
+}
+
+.content {
+  position:fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  
+}
+.content1 {
+  position:fixed;
+  bottom: 745px;
+  right: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  background-color: #04AA6D;
+  width: fit-content;
+  padding: 1px;
+  cursor: pointer;
+}
+
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px;;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="intro.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+  
+</video>
+
+<div class="content">
+  <h1>Our Content</h1>
+  <p>Hi viewers.We are trying to publish computer information, gaming ,tech,fixing errors.Our content is always unique.Thank you all.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<div class="content1">
+  <button onclick="window.location.href = 'https://joeljogi.github.io/message/';">DOUBT</button>
+</div>
+<div class="button">
+  <a href="https://youtube.com" >Your Button Text</a>
+  </div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
