@@ -1,123 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>At The Cast</title>
   <link rel="stylesheet" href="index.css">
-  <style>
-    /* Global styles */
-    * {
-      box-sizing: border-box;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   .download {
+          background-color: #4CAF50;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+        }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      font-size: 1rem; /* Use rem for better scaling */
-      background-color: #f5f5f5; /* Light background for better contrast */
-    }
+body {
+  
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
 
-    #myVideo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); /* Center video on screen */
-      width: 100%;  /* Adapt video width to screen */
-      height: 100vh;  /* Adapt video height to viewport height */
-      min-width: 80%; /* Fallback for smaller screens */
-      min-height: 80%;  /* Fallback for smaller screens */
-      object-fit: cover;  /* Ensure video fills container */
-    }
+#myVideo {
+ position:fixed;
+  right: -200px;
+  bottom: -150px;
+  min-width: 80%; 
+  min-height: 80%;
+  -ms-zoom-animation: none;
+}
 
-    .content {
-      position: absolute;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      width: 100%; /* Ensure content fills screen width */
-      padding: 20px;
-    }
+.content {
+  position:fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  width: 100%;
+  padding: 20px;
+  
+}
+.content1 {
+  position:fixed;
+  bottom: 745px;
+  right: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  background-color: #04AA6D;
+  width: fit-content;
+  padding: 1px;
+  cursor: pointer;
+}
 
-    .content h1 {
-      margin-bottom: 1rem; /* Adjust spacing for different font sizes */
-    }
 
-    .content p {
-      font-size: 0.8rem; /* Slightly smaller font for better readability */
-    }
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px;;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
 
-    .content1,
-    .button {
-      display: flex; /* Center buttons horizontally */
-      justify-content: center; /* Align content within buttons */
-      margin: 1rem auto; /* Add margin for better spacing */
-    }
-
-    .content1 button,
-    .button a {
-      background-color: #04AA6D; /* Use content1 color for consistency */
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      text-decoration: none; /* Remove underline from anchor */
-      font-size: 1rem; /* Consistent font size */
-      cursor: pointer;
-    }
-
-    .content1 button:hover,
-    .button a:hover {
-      background-color: #007bff; /* Consistent hover effect */
-    }
-
-    #myBtn {
-      padding: 15px 32px; /* Adjust padding for larger button */
-    }
-
-    /* Media query for smaller screens */
-    @media (max-width: 768px) {
-      .content h1 {
-        font-size: 1.2rem; /* Increase heading size on smaller screens */
-      }
-
-      .content p {
-        font-size: 0.9rem; /* Slightly larger font for readability */
-      }
-
-      #myBtn {
-        font-size: 16px; /* Reduce button font size */
-      }
-
-      .content1 button,
-      .button a {
-        font-size: 0.9rem; /* Reduce button font size */
-      }
-    }
-  </style>
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+  <a href="dennis.apk" download="dennis apk" class="download">download</a>
 </head>
 <body>
-
+  <meta charset="UTF-8">
+<meta name="viewport"content ="width=device-width,initial-scaled=1.0">
+  <title> At The Cast</title>
 <video autoplay muted loop id="myVideo">
   <source src="intro.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
+  
 </video>
 
 <div class="content">
   <h1>Our Content</h1>
-  <p>Hi viewers. We are trying to publish computer information, gaming, tech, fixing errors. Our content is always unique. Thank you all.</p>
+  <p>Hi viewers.We are trying to publish computer information, gaming ,tech,fixing errors.Our content is always unique.Thank you all.</p>
   <button id="myBtn" onclick="myFunction()">Pause</button>
 </div>
 
 <div class="content1">
   <button onclick="window.location.href = 'https://joeljogi.github.io/message/';">DOUBT</button>
 </div>
-
 <div class="button">
-  <a href="https://youtube.com">Your Button Text</a>
-</div>
+  <a href="https://youtube.com" >Your Button Text</a>
+  </div>
 
 <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
 
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
 }
 </script>
 
